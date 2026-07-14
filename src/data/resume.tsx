@@ -85,7 +85,7 @@ export const DATA = {
       start: "September 18, 2025",
       end: "Present",
       logoUrl: "/logos/mphasis.svg",
-      description: "Design, develop, and optimize high-performance enterprise web applications using React.js, Next.js, and TypeScript. Collaborate with cross-functional global teams to deliver scalable cloud-integrated front-end architectures while improving application load times, accessibility, and code maintainability through modern design patterns."
+      description: "Design, develop, and optimize high-performance enterprise web applications using React.js, Next.js, and TypeScript under a Micro Frontend (MFE) architecture. Collaborate with cross-functional global teams to deliver scalable cloud-integrated front-end modules while improving application load times, accessibility, and code maintainability through modern design patterns."
     },
     {
       company: "Must Fintech",
@@ -94,6 +94,7 @@ export const DATA = {
       start: "August 2024",
       end: "October 2024",
       logoUrl: "/logos/mustfintech.png",
+      description: "Led the frontend engineering of a Next.js-based Fintech platform. Developed highly interactive financial dashboards, integrated secure payment systems, and worked on MustMate (an HR management system) implementing role-based access control, Slack authentication, and responsive Material UI/Tailwind CSS components."
     },
     {
       company: "Qilinlab Software PVT. LTD.",

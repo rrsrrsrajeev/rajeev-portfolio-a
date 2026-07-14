@@ -68,6 +68,7 @@ export default function Page() {
                 // badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
                 description={work.description}
+                defaultExpanded={id === 0}
               />
             </BlurFade>
           ))}
