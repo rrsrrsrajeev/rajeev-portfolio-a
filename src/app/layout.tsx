@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { GlowGrid } from "@/components/magicui/glow-grid";
+import ChatBox from "@/components/chat-box";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -73,6 +74,7 @@ export default function RootLayout({
             {children}
             <Navbar />
             <GlowGrid />
+            <ChatBox />
           </TooltipProvider>
         </ThemeProvider>
       </body>
