@@ -8,9 +8,9 @@ export const DATA = {
   "url": "https://github.com/rajeever19",
   "location": "Bengaluru, India",
   "locationLink": "https://www.google.com/maps/place/bengaluru",
-  "description": "Full-Stack Engineer | React, Next.js & React Native | Amazon Web Services | Expanding into Full-Stack with NestJS",
-  "summary": "I'm a Front-End Developer with 3.7 years of experience specializing in <b>React.js, Next.js, and React Native</b>. I’ve built fast, scalable web and mobile applications for startup environments, where ownership and quick iteration were key.\n I focus on clean UI, responsive design, and performance optimization while also exploring backend technologies like <b>NestJS</b> to strengthen my full-stack capabilities.\nI’m passionate about solving real-world problems through intuitive UX and maintainable code, and I’m eager to contribute to high-impact projects in a collaborative and fast-paced team.",
-avatarUrl: "/rajeev.jpeg",
+  "description": "Senior Software Engineer | React, Next.js & React Native | Amazon Web Services | Expanding into Full-Stack with NestJS",
+  "summary": "I'm a Senior Software Engineer with over 4.5 years of experience specializing in <b>React.js, Next.js, and React Native</b>. I’ve built fast, scalable web and mobile applications for startup and enterprise environments, where ownership and quick iteration were key.\n I focus on clean UI, responsive design, and performance optimization while also exploring backend technologies like <b>NestJS</b> to strengthen my full-stack capabilities.\nI’m passionate about solving real-world problems through intuitive UX and maintainable code, and I’m eager to contribute to high-impact projects in a collaborative and fast-paced team.",
+  avatarUrl: "/rajeev.jpeg",
    skills: [
     { title: "React JS", icon: "logos:react" },
     { title: "React Native", icon: "logos:react" },
@@ -78,13 +78,22 @@ avatarUrl: "/rajeev.jpeg",
 
   work: [
     {
+      company: "Mphasis India Limited",
+      href: "https://www.mphasis.com",
+      title: "Senior Software Engineer",
+      location: "Bengaluru, India",
+      start: "September 18, 2025",
+      end: "Present",
+      logoUrl: "/logos/mphasis.svg",
+      description: "Design, develop, and optimize high-performance enterprise web applications using React.js, Next.js, and TypeScript. Collaborate with cross-functional global teams to deliver scalable cloud-integrated front-end architectures while improving application load times, accessibility, and code maintainability through modern design patterns."
+    },
+    {
       company: "Must Fintech",
       title: "React JS Developer",
       location: "Bengaluru, India",
       start: "August 2024",
       end: "October 2024",
       logoUrl: "/logos/mustfintech.png",
-      description: "Worked on MustMate, an HR management platform, where I led the development of dynamic user interfaces, implemented role-based access control, Slack authentication, and contributed to the core dashboard and member management modules using Next.js, Redux, and Material UI."
     },
     {
       company: "Qilinlab Software PVT. LTD.",
@@ -111,6 +120,14 @@ avatarUrl: "/rajeev.jpeg",
 
   ],
   education: [
+    {
+      school: "Lovely Professional University (LPU Online)",
+      href: "https://www.lpuonline.com/",
+      degree: "Master of Computer Applications (MCA)",
+      logoUrl: "/logos/lpu.svg",
+      start: "2025",
+      end: "2027",
+    },
     {
       school: "Sri Radha Krishna Goenka College, Sitamarhi",
       href: "https://goenkacollege.org/",

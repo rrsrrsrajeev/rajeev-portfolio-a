@@ -162,21 +162,38 @@ Following the frontmatter, you can write standard Markdown or HTML. MDX supports
 
 ## Part 4: Developer Workflows & Checklists
 
-### 1. Adding a New Blog Post
-1.  Navigate to `/content`.
-2.  Create a new file named `your-post-slug.mdx`.
-3.  Add the required frontmatter block at the top.
-4.  Write content using Markdown.
-5.  Run local server `pnpm dev` and visit `http://localhost:3000/blog` to verify.
+### 1. Starting the Application
+For local development:
+```bash
+npm run dev
+```
 
-### 2. Updating Profile/Resume Information
-1.  Open [resume.tsx](file:///Users/rajeevranjan/Desktop/ALL%20Project/rajeev-portfolio/src/data/resume.tsx).
-2.  Locate the section you want to modify (e.g., `DATA.work`, `DATA.skills`, `DATA.projects`).
-3.  Add or modify the fields complying with the schemas detailed in Part 3.
-4.  If adding assets (e.g., logos or screenshots), place them in `/public/logos` or `/public/projects` and reference them starting with `/` (e.g., `/logos/mylogo.png`).
+For production builds (recommended flow):
+1. Compile the optimized build first:
+   ```bash
+   npm run build
+   ```
+2. Start the built production server:
+   ```bash
+   npm start
+   ```
 
-### 3. Adding New UI Components
-1.  Place UI components in [src/components](file:///Users/rajeevranjan/Desktop/ALL%20Project/rajeev-portfolio/src/components) or a subfolder.
-2.  Export props interface and utilize TypeScript for prop validation.
-3.  Add JSDoc comments to document props and key interactions.
-4.  Make sure components are fully responsive (using Tailwind responsive breakpoints `sm:`, `md:`, `lg:`).
+### 2. Adding a New Blog Post
+1. Navigate to `/content`.
+2. Create a new file named `your-post-slug.mdx`.
+3. Add the required frontmatter block at the top.
+4. Write content using Markdown.
+5. Run the dev server (`npm run dev`) and visit `http://localhost:3000/blog` to verify.
+
+### 3. Updating Profile/Resume Information
+1. Open [resume.tsx](file:///Users/rajeevranjan/Desktop/ALL%20Project/rajeev-portfolio/src/data/resume.tsx).
+2. Locate the section you want to modify (e.g., `DATA.work`, `DATA.skills`, `DATA.projects`).
+3. Add or modify the fields complying with the schemas detailed in Part 3.
+4. If adding assets (e.g., logos or screenshots), place them in `/public/logos` or `/public/projects` and reference them starting with `/` (e.g., `/logos/mylogo.png`).
+
+### 4. Adding New UI Components
+1. Place UI components in [src/components](file:///Users/rajeevranjan/Desktop/ALL%20Project/rajeev-portfolio/src/components) or a subfolder.
+2. Export props interface and utilize TypeScript for prop validation.
+3. Add JSDoc comments to document props and key interactions.
+4. Make sure components are fully responsive (using Tailwind responsive breakpoints `sm:`, `md:`, `lg:`).
+
