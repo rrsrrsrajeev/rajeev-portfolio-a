@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 160" width="100%" height="100%">
+  <defs>
+    <!-- Left loop gradient: Blue/Cyan to Green -->
+    <linearGradient id="leftLoopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A1E0" />
+      <stop offset="100%" stop-color="#78BE20" />
+    </linearGradient>
+    <!-- Right loop gradient: Magenta to Purple -->
+    <linearGradient id="rightLoopGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E4007B" />
+      <stop offset="100%" stop-color="#7A2182" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Icon -->
+  <g transform="translate(10, 10)">
+    <!-- Left blue-green loop -->
+    <path d="M 60,65 
+             C 45,50 35,55 35,70 
+             C 35,85 50,110 65,125 
+             C 75,135 85,130 85,120 
+             L 85,100 
+             C 85,95 80,90 75,85 
+             L 55,65 
+             C 48,58 48,46 55,39 
+             L 70,24 
+             C 77,17 89,17 96,24
+             L 96,24
+             C 100,28 102,34 100,40
+             L 95,55
+             C 93,61 87,65 80,65
+             Z" 
+          fill="url(#leftLoopGrad)" />
+
+    <!-- Right magenta-purple loop -->
+    <path d="M 90,75
+             C 105,90 115,85 115,70
+             C 115,55 100,30 85,15
+             C 75,5 65,10 65,20
+             L 65,40
+             C 65,45 70,50 75,55
+             L 95,75
+             C 102,82 102,94 95,101
+             L 80,116
+             C 73,123 61,123 54,116
+             L 54,116
+             C 50,112 48,106 50,100
+             L 55,85
+             C 57,79 63,75 70,75
+             Z" 
+          fill="url(#rightLoopGrad)" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(145, 10)">
+    <!-- Mphasis Text -->
+    <text x="0" y="80" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+          font-size="64" 
+          font-weight="700" 
+          fill="#231F20" 
+          letter-spacing="-1">Mphasis</text>
+    
+    <!-- Tagline Text -->
+    <text x="3" y="118" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+          font-size="21" 
+          font-weight="400" 
+          fill="#58595B" 
+          letter-spacing="5.5">THE NEXT APPLIED</text>
+  </g>
+</svg>

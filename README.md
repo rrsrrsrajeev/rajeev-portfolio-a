@@ -27,15 +27,23 @@
 3. Install dependencies:
 
    ```bash
-   pnpm install
+   npm install
    ```
 
-4. Start the local Server:
+4. Start the local Development Server:
 
    ```bash
-   pnpm dev
+   npm run dev
    ```
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+5. Or build and start the Production Server:
+
+   ```bash
+   npm run build
+   npm start
+   ```
+
+6. Open the [Config file](./src/data/resume.tsx) and make changes
 
 # License
+
