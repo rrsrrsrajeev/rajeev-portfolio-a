@@ -150,7 +150,7 @@ export default function ChatBox() {
                   </span>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm tracking-wide">Rajeev's Assistant</h3>
+                  <h3 className="font-semibold text-sm tracking-wide">Rajeev&apos;s Assistant</h3>
                   <p className="text-[10px] text-purple-100 flex items-center">
                     <span className="inline-block size-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
                     Online • AI Agent
