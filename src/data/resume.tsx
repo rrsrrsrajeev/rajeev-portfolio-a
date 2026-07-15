@@ -61,10 +61,10 @@ export const DATA = {
         icon: Icons.x,
         navbar: true,
       },
-      Youtube: {
-        name: "Youtube",
-        url: "https://github.com/rajeever19",
-        icon: Icons.youtube,
+      Contact: {
+        name: "Contact",
+        url: "#",
+        icon: Icons.contact,
         navbar: true,
       },
       email: {
@@ -156,6 +156,32 @@ export const DATA = {
 
   ],
   projects: [
+    {
+      title: "AI Chat Bot",
+      href: "#",
+      dates: "Upcoming / In Progress ( Self Project )",
+      active: true,
+      description:
+        "An interactive AI assistant board designed for real-time customer engagement and automated server-side intelligence.\n\n**Status:** 🚧 *In Progress (Upcoming)*",
+      technologies: [
+        "Artificial Intelligence",
+        "RAG",
+        "Scikit-Learn",
+        "Pandas",
+        "Python",
+        "Next.js",
+        "React JS",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Gemini API",
+        "Socket.io",
+        "Node.js"
+      ],
+      links: [],
+      image: "/projects/ai-chatbot.svg",
+      video: "",
+    },
     {
       title: "Eduley",
       href: "https://Eduley.com",

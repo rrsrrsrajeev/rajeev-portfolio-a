@@ -6,8 +6,8 @@ import { ResumeCard } from "@/components/resume-card";
 import SkillsSection from "@/components/SkillsSection";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
-import Link from "next/link";
 import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -29,9 +29,9 @@ export default function Page() {
                   <svg width="0" height="0" className="absolute">
                     <defs>
                       <linearGradient id="neonHandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#a855f7" />
-                        <stop offset="50%" stop-color="#ec4899" />
-                        <stop offset="100%" stop-color="#3b82f6" />
+                        <stop offset="0%" stopColor="#a855f7" />
+                        <stop offset="50%" stopColor="#ec4899" />
+                        <stop offset="100%" stopColor="#3b82f6" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -83,7 +83,7 @@ export default function Page() {
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
-            <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
+            <BlurFade key={`${work.company}-${work.title}-${id}`} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
               <ResumeCard
                 key={work.company + id}
                 logoUrl={work.logoUrl}
@@ -106,7 +106,7 @@ export default function Page() {
             <h2 className="text-xl font-bold">Education</h2>
           </BlurFade>
           {DATA.education.map((education, id) => (
-            <BlurFade key={education.school} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
+            <BlurFade key={`${education.school}-${id}`} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
               <ResumeCard
                 key={education.school}
                 href={education.href}
@@ -144,7 +144,7 @@ export default function Page() {
                   dates={project.dates}
                   tags={project.technologies}
                   image={project.image}
-                  video={project.video}
+                  video={project?.video}
                   links={project.links}
                 />
               </BlurFade>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090514" />
+      <stop offset="100%" stop-color="#0a0f1d" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="50%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGrad)" stroke="url(#glowGrad)" stroke-width="12" />
+  
+  <!-- Robot/AI face -->
+  <g transform="translate(128, 128)" fill="none" stroke="url(#glowGrad)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Robot Head Outline -->
+    <rect x="48" y="64" width="160" height="128" rx="32" stroke-width="12" fill="#0f172a" />
+    
+    <!-- Ears / Antennas -->
+    <line x1="48" y1="128" x2="28" y2="128" stroke-width="10" />
+    <circle cx="20" cy="128" r="8" fill="url(#glowGrad)" />
+    <line x1="208" y1="128" x2="228" y2="128" stroke-width="10" />
+    <circle cx="236" cy="128" r="8" fill="url(#glowGrad)" />
+    
+    <!-- Top Antenna -->
+    <line x1="128" y1="64" x2="128" y2="32" stroke-width="10" />
+    <circle cx="128" cy="24" r="12" fill="url(#glowGrad)" />
+    
+    <!-- Eyes (Glowing) -->
+    <circle cx="88" cy="120" r="14" fill="#a855f7" stroke="none" />
+    <circle cx="168" cy="120" r="14" fill="#3b82f6" stroke="none" />
+    
+    <!-- Mouth / Waveform inside mouth -->
+    <path d="M 88,155 Q 128,175 168,155" stroke-width="10" />
+  </g>
+  
+  <!-- Chat bubbles in the background -->
+  <path d="M 380,140 C 400,140 410,150 410,165 C 410,180 400,190 380,190 L 360,190 L 350,205 L 350,190 C 340,190 330,180 330,165 C 330,150 340,140 360,140 Z" fill="url(#glowGrad)" opacity="0.15" />
+  <path d="M 120,330 C 100,330 90,340 90,355 C 90,370 100,380 120,380 L 140,380 L 150,395 L 150,380 C 160,380 170,370 170,355 C 170,340 160,330 140,330 Z" fill="url(#glowGrad)" opacity="0.15" />
+</svg>

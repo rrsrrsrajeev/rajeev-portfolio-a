@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Mail, Phone, Info } from "lucide-react";
+import { Icons } from "@/components/icons";
 
 interface Message {
   id: string;
@@ -44,6 +45,16 @@ export default function ChatBox() {
     }
   }, [messages, isOpen, isTyping]);
 
+  useEffect(() => {
+    const handleToggle = () => {
+      setIsOpen((prev) => !prev);
+    };
+    window.addEventListener("toggle-chat", handleToggle);
+    return () => {
+      window.removeEventListener("toggle-chat", handleToggle);
+    };
+  }, []);
+
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputValue.trim()) return;
@@ -75,8 +86,8 @@ export default function ChatBox() {
 
   return (
     <>
-      {/* Floating Action Button */}
-      <div className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50">
+      {/* Floating Action Button - Hidden on mobile view */}
+      <div className="hidden md:block fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50">
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
           whileHover={{ scale: 1.1 }}
@@ -195,6 +206,15 @@ export default function ChatBox() {
                           >
                             <Phone className="size-3.5 text-purple-500" />
                             <span>+91 85418 49528</span>
+                          </a>
+                          <a
+                            href="https://wa.me/918541849528"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-zinc-600 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors p-1.5 bg-white/50 dark:bg-zinc-900/50 rounded-lg border border-zinc-200/40 dark:border-zinc-800/40"
+                          >
+                            <Icons.whatsapp className="size-3.5 text-emerald-500" />
+                            <span>WhatsApp Chat (+91 85418 49528)</span>
                           </a>
                         </div>
                       </div>
