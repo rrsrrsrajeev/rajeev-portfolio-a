@@ -143,19 +143,19 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
 }
 
-@keyframes wave-mirrored {
-  0% { transform: rotate(45deg) scaleX(-1); }
-  10% { transform: rotate(59deg) scaleX(-1); }
-  20% { transform: rotate(37deg) scaleX(-1); }
-  30% { transform: rotate(59deg) scaleX(-1); }
-  40% { transform: rotate(41deg) scaleX(-1); }
-  50% { transform: rotate(55deg) scaleX(-1); }
-  60% { transform: rotate(45deg) scaleX(-1); }
-  100% { transform: rotate(45deg) scaleX(-1); }
+@keyframes wave-upright {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(12deg); }
+  30% { transform: rotate(-10deg); }
+  45% { transform: rotate(10deg); }
+  60% { transform: rotate(-8deg); }
+  75% { transform: rotate(6deg); }
+  90% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
-.animate-wave-mirrored {
-  animation: wave-mirrored 2.2s infinite;
-  transform-origin: 50% 70%;
+.animate-wave-upright {
+  animation: wave-upright 2s infinite;
+  transform-origin: 50% 90%;
   display: inline-block;
 }

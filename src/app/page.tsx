@@ -6,6 +6,7 @@ import { ResumeCard } from "@/components/resume-card";
 import SkillsSection from "@/components/SkillsSection";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
+import { Icon } from "@iconify/react";
 import Link from "next/link";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -13,6 +14,50 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      {/* Visually hidden semantic profile optimized for AI search engines, LLMs, and Google Search indexers */}
+      <div className="sr-only" aria-hidden="true">
+        <h1>{DATA.name} - Senior Frontend Engineer &amp; Full-Stack Developer</h1>
+        <p>
+          Rajeev Ranjan Singh is a Senior Software Engineer specializing in React.js, Next.js, React Native, and Micro Frontends (MFE), with over 4.5 years of professional experience. Currently based in Bengaluru, India.
+        </p>
+        <h2>Technical Core Skills &amp; Technologies</h2>
+        <ul>
+          <li>Languages: TypeScript, JavaScript (ES6+), Python, HTML5, CSS3, JSON</li>
+          <li>Frontend Frameworks &amp; Libraries: React.js, Next.js, React Native, Redux, Material UI, Tailwind CSS, Bootstrap, D3.js, React Flow, Framer Motion</li>
+          <li>Backend &amp; Cloud: NestJS, Node.js, Socket.io, Amazon Web Services (AWS)</li>
+          <li>Testing &amp; DevOps: Jest, Unit Testing, Docker, Jenkins, Git</li>
+          <li>AI &amp; Data Science: Retrieval-Augmented Generation (RAG), Artificial Intelligence, Scikit-Learn, Pandas</li>
+        </ul>
+        <h2>Professional Work History</h2>
+        <ul>
+          {DATA.work.map((job, idx) => (
+            <li key={idx}>
+              Senior Frontend Developer at {job.company} - {job.title} ({job.start} - {job.end ?? "Present"}). {job.description}
+            </li>
+          ))}
+        </ul>
+        <h2>Education</h2>
+        <ul>
+          {DATA.education.map((edu, idx) => (
+            <li key={idx}>
+              {edu.degree} from {edu.school} ({edu.start} - {edu.end})
+            </li>
+          ))}
+        </ul>
+        <h2>Certifications</h2>
+        <ul>
+          {DATA.certifications?.map((cert, idx) => (
+            <li key={idx}>
+              {cert.title} issued by {cert.issuer} ({cert.period}). Credential ID: {cert.credentialId || "N/A"}
+            </li>
+          ))}
+        </ul>
+        <h2>Contact Details</h2>
+        <p>
+          Email: {DATA.contact.email} | Phone: {DATA.contact.tel} | Location: {DATA.location} | GitHub: {DATA.url}
+        </p>
+      </div>
+
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -24,37 +69,21 @@ export default function Page() {
                   yOffset={8}
                   text={`Hi, I am ${DATA.name.split(" ")[0]}`}
                 />
-                <span className="relative -top-2 ml-4 inline-block select-none animate-wave-mirrored">
-                  <svg 
-                    viewBox="0 0 24 24" 
-                    className="size-8 sm:size-12 xl:size-14 inline-block select-none overflow-visible"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                <span className="relative -top-1.5 ml-3 inline-block select-none animate-wave-upright">
+                  <svg width="0" height="0" className="absolute">
                     <defs>
                       <linearGradient id="neonHandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#a855f7" />
-                        <stop offset="50%" stop-color="#ec4899" />
-                        <stop offset="100%" stop-color="#3b82f6" />
+                        <stop offset="0%" stopColor="#a855f7" />
+                        <stop offset="50%" stopColor="#ec4899" />
+                        <stop offset="100%" stopColor="#3b82f6" />
                       </linearGradient>
-                      {/* Mask to carve a gap between thumb and index finger/palm */}
-                      <mask id="thumbGapMask">
-                        <rect x="-10" y="-10" width="44" height="44" fill="white" />
-                        <path 
-                          d="M 8.2 13.0 C 7.5 14.5, 6.0 16.0, 4.0 16.8" 
-                          stroke="black" 
-                          strokeWidth="1.2" 
-                          strokeLinecap="round" 
-                          fill="none" 
-                        />
-                      </mask>
                     </defs>
-                    {/* Google Material Design Waving Hand Icon with thumb mask applied */}
-                    <path 
-                      d="M23 17c0 3.31-2.69 6-6 6v-1.5c2.48 0 4.5-2.02 4.5-4.5H23zM1 7c0-3.31 2.69-6 6-6v1.5C4.52 2.5 2.5 4.52 2.5 7H1zm7.01-2.68-4.6 4.6c-3.22 3.22-3.22 8.45 0 11.67s8.45 3.22 11.67 0l7.07-7.07c.49-.49.49-1.28 0-1.77a1.25 1.25 0 0 0-1.77 0l-4.42 4.42-.71-.71 6.54-6.54c.49-.49.49-1.28 0-1.77s-1.28-.49-1.77 0l-5.83 5.83-.71-.71 6.89-6.89c.49-.49.49-1.28 0-1.77s-1.28-.49-1.77 0l-6.89 6.89-.69-.7 5.48-5.48c.49-.49.49-1.28 0-1.77s-1.28-.49-1.77 0l-7.62 7.62a4.003 4.003 0 0 1-.33 5.28l-.71-.71a3 3 0 0 0 0-4.24l-.35-.35 4.07-4.07c.49-.49.49-1.28 0-1.77a1.27 1.27 0 0 0-1.78.01z" 
-                      fill="url(#neonHandGrad)"
-                      mask="url(#thumbGapMask)"
-                    />
                   </svg>
+                  <Icon 
+                    icon="fluent:hand-wave-24-filled" 
+                    className="size-8 sm:size-12 xl:size-14 inline-block select-none overflow-visible"
+                    style={{ fill: "url(#neonHandGrad)" }}
+                  />
                 </span>
               </div>
               <div className="flex flex-col space-y-1">
@@ -98,7 +127,7 @@ export default function Page() {
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
-            <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
+            <BlurFade key={`${work.company}-${work.title}-${id}`} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
               <ResumeCard
                 key={work.company + id}
                 logoUrl={work.logoUrl}
@@ -121,7 +150,7 @@ export default function Page() {
             <h2 className="text-xl font-bold">Education</h2>
           </BlurFade>
           {DATA.education.map((education, id) => (
-            <BlurFade key={education.school} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
+            <BlurFade key={`${education.school}-${id}`} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
               <ResumeCard
                 key={education.school}
                 href={education.href}
@@ -130,6 +159,27 @@ export default function Page() {
                 title={education.school}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+      <section id="certifications">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Certifications</h2>
+          </BlurFade>
+          {DATA.certifications?.map((certification, id) => (
+            <BlurFade key={`${certification.title}-${id}`} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+              <ResumeCard
+                key={certification.title}
+                href={certification.href}
+                logoUrl={certification.logoUrl}
+                altText={certification.issuer}
+                title={certification.title}
+                subtitle={certification.issuer}
+                period={certification.period}
+                description={certification.description}
               />
             </BlurFade>
           ))}
@@ -159,7 +209,7 @@ export default function Page() {
                   dates={project.dates}
                   tags={project.technologies}
                   image={project.image}
-                  video={project.video}
+                  video={project?.video}
                   links={project.links}
                 />
               </BlurFade>

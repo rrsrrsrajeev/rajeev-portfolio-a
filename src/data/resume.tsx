@@ -61,10 +61,10 @@ export const DATA = {
         icon: Icons.x,
         navbar: true,
       },
-      Youtube: {
-        name: "Youtube",
-        url: "https://github.com/rajeever19",
-        icon: Icons.youtube,
+      Contact: {
+        name: "Contact",
+        url: "#",
+        icon: Icons.contact,
         navbar: true,
       },
       email: {
@@ -156,6 +156,32 @@ export const DATA = {
 
   ],
   projects: [
+    {
+      title: "AI Chat Bot",
+      href: "#",
+      dates: "Upcoming / In Progress ( Self Project )",
+      active: true,
+      description:
+        "An interactive AI assistant board designed for real-time customer engagement and automated server-side intelligence.\n\n**Status:** 🚧 *In Progress (Upcoming)*",
+      technologies: [
+        "Artificial Intelligence",
+        "RAG",
+        "Scikit-Learn",
+        "Pandas",
+        "Python",
+        "Next.js",
+        "React JS",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Gemini API",
+        "Socket.io",
+        "Node.js"
+      ],
+      links: [],
+      image: "/projects/ai-chatbot.svg",
+      video: "",
+    },
     {
       title: "Eduley",
       href: "https://Eduley.com",
@@ -272,6 +298,53 @@ export const DATA = {
       video:
         "https://www.youtube.com/watch?v=UkOPg93EIK4",
     }
+  ],
+  certifications: [
+    {
+      title: "Microfrontends with React",
+      issuer: "Udemy",
+      period: "Issued Jan 2026",
+      credentialId: "UC-ab500d74-6f1b-421d-bf33-170bf859d162",
+      href: "https://www.udemy.com/certificate/UC-ab500d74-6f1b-421d-bf33-170bf859d162/",
+      logoUrl: "https://www.vectorlogo.zone/logos/udemy/udemy-icon.svg",
+      description: "Skills: Web Applications, Microfrontends with React",
+    },
+    {
+      title: "Python (Basic) Certificate",
+      issuer: "HackerRank",
+      period: "Issued Apr 2025",
+      credentialId: "",
+      href: "https://www.hackerrank.com/certificates/",
+      logoUrl: "https://www.vectorlogo.zone/logos/hackerrank/hackerrank-icon.svg",
+      description: "HackerRank Skills Verification",
+    },
+    {
+      title: "React Native: Mobile App Development (CLI) [2025]",
+      issuer: "Udemy",
+      period: "Issued Jan 2025",
+      credentialId: "UC-26bfbdd1-6ae2-434d-8339-53b379fa58c4",
+      href: "https://www.udemy.com/certificate/UC-26bfbdd1-6ae2-434d-8339-53b379fa58c4/",
+      logoUrl: "https://www.vectorlogo.zone/logos/udemy/udemy-icon.svg",
+      description: "Skills: React Native, React.js",
+    },
+    {
+      title: "Robotics workshop certificate",
+      issuer: "New Polytechnic College Patna",
+      period: "Issued Dec 2018",
+      credentialId: "",
+      href: "#",
+      logoUrl: "https://api.iconify.design/lucide:graduation-cap.svg?color=%237c3aed",
+      description: "Skills: Unit Testing",
+    },
+    {
+      title: "Front End Development Libraries",
+      issuer: "freeCodeCamp",
+      period: "Issued Sep 2020",
+      credentialId: "",
+      href: "https://freecodecamp.org/certification/",
+      logoUrl: "https://www.vectorlogo.zone/logos/freecodecamp/freecodecamp-icon.svg",
+      description: "Skills: Linux, JavaScript Object Model (JSOM)",
+    },
   ],
   testimonials: [
   { quote: "Rajeev is an outstanding developer with great attention to detail.", author: "Team Lead at MustFinTech" },
