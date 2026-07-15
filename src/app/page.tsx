@@ -7,6 +7,7 @@ import SkillsSection from "@/components/SkillsSection";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
+import { Icon } from "@iconify/react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -24,37 +25,21 @@ export default function Page() {
                   yOffset={8}
                   text={`Hi, I am ${DATA.name.split(" ")[0]}`}
                 />
-                <span className="relative -top-2 ml-4 inline-block select-none animate-wave-mirrored">
-                  <svg 
-                    viewBox="0 0 24 24" 
-                    className="size-8 sm:size-12 xl:size-14 inline-block select-none overflow-visible"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                <span className="relative -top-1.5 ml-3 inline-block select-none animate-wave-upright">
+                  <svg width="0" height="0" className="absolute">
                     <defs>
                       <linearGradient id="neonHandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stop-color="#a855f7" />
                         <stop offset="50%" stop-color="#ec4899" />
                         <stop offset="100%" stop-color="#3b82f6" />
                       </linearGradient>
-                      {/* Mask to carve a gap between thumb and index finger/palm */}
-                      <mask id="thumbGapMask">
-                        <rect x="-10" y="-10" width="44" height="44" fill="white" />
-                        <path 
-                          d="M 8.2 13.0 C 7.5 14.5, 6.0 16.0, 4.0 16.8" 
-                          stroke="black" 
-                          strokeWidth="1.2" 
-                          strokeLinecap="round" 
-                          fill="none" 
-                        />
-                      </mask>
                     </defs>
-                    {/* Google Material Design Waving Hand Icon with thumb mask applied */}
-                    <path 
-                      d="M23 17c0 3.31-2.69 6-6 6v-1.5c2.48 0 4.5-2.02 4.5-4.5H23zM1 7c0-3.31 2.69-6 6-6v1.5C4.52 2.5 2.5 4.52 2.5 7H1zm7.01-2.68-4.6 4.6c-3.22 3.22-3.22 8.45 0 11.67s8.45 3.22 11.67 0l7.07-7.07c.49-.49.49-1.28 0-1.77a1.25 1.25 0 0 0-1.77 0l-4.42 4.42-.71-.71 6.54-6.54c.49-.49.49-1.28 0-1.77s-1.28-.49-1.77 0l-5.83 5.83-.71-.71 6.89-6.89c.49-.49.49-1.28 0-1.77s-1.28-.49-1.77 0l-6.89 6.89-.69-.7 5.48-5.48c.49-.49.49-1.28 0-1.77s-1.28-.49-1.77 0l-7.62 7.62a4.003 4.003 0 0 1-.33 5.28l-.71-.71a3 3 0 0 0 0-4.24l-.35-.35 4.07-4.07c.49-.49.49-1.28 0-1.77a1.27 1.27 0 0 0-1.78.01z" 
-                      fill="url(#neonHandGrad)"
-                      mask="url(#thumbGapMask)"
-                    />
                   </svg>
+                  <Icon 
+                    icon="fluent:hand-wave-24-filled" 
+                    className="size-8 sm:size-12 xl:size-14 inline-block select-none overflow-visible"
+                    style={{ fill: "url(#neonHandGrad)" }}
+                  />
                 </span>
               </div>
               <div className="flex flex-col space-y-1">
