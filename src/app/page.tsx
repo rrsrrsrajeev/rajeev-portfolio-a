@@ -14,6 +14,50 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      {/* Visually hidden semantic profile optimized for AI search engines, LLMs, and Google Search indexers */}
+      <div className="sr-only" aria-hidden="true">
+        <h1>{DATA.name} - Senior Frontend Engineer &amp; Full-Stack Developer</h1>
+        <p>
+          Rajeev Ranjan Singh is a Senior Software Engineer specializing in React.js, Next.js, React Native, and Micro Frontends (MFE), with over 4.5 years of professional experience. Currently based in Bengaluru, India.
+        </p>
+        <h2>Technical Core Skills &amp; Technologies</h2>
+        <ul>
+          <li>Languages: TypeScript, JavaScript (ES6+), Python, HTML5, CSS3, JSON</li>
+          <li>Frontend Frameworks &amp; Libraries: React.js, Next.js, React Native, Redux, Material UI, Tailwind CSS, Bootstrap, D3.js, React Flow, Framer Motion</li>
+          <li>Backend &amp; Cloud: NestJS, Node.js, Socket.io, Amazon Web Services (AWS)</li>
+          <li>Testing &amp; DevOps: Jest, Unit Testing, Docker, Jenkins, Git</li>
+          <li>AI &amp; Data Science: Retrieval-Augmented Generation (RAG), Artificial Intelligence, Scikit-Learn, Pandas</li>
+        </ul>
+        <h2>Professional Work History</h2>
+        <ul>
+          {DATA.work.map((job, idx) => (
+            <li key={idx}>
+              Senior Frontend Developer at {job.company} - {job.title} ({job.start} - {job.end ?? "Present"}). {job.description}
+            </li>
+          ))}
+        </ul>
+        <h2>Education</h2>
+        <ul>
+          {DATA.education.map((edu, idx) => (
+            <li key={idx}>
+              {edu.degree} from {edu.school} ({edu.start} - {edu.end})
+            </li>
+          ))}
+        </ul>
+        <h2>Certifications</h2>
+        <ul>
+          {DATA.certifications?.map((cert, idx) => (
+            <li key={idx}>
+              {cert.title} issued by {cert.issuer} ({cert.period}). Credential ID: {cert.credentialId || "N/A"}
+            </li>
+          ))}
+        </ul>
+        <h2>Contact Details</h2>
+        <p>
+          Email: {DATA.contact.email} | Phone: {DATA.contact.tel} | Location: {DATA.location} | GitHub: {DATA.url}
+        </p>
+      </div>
+
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -115,6 +159,27 @@ export default function Page() {
                 title={education.school}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+      <section id="certifications">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Certifications</h2>
+          </BlurFade>
+          {DATA.certifications?.map((certification, id) => (
+            <BlurFade key={`${certification.title}-${id}`} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+              <ResumeCard
+                key={certification.title}
+                href={certification.href}
+                logoUrl={certification.logoUrl}
+                altText={certification.issuer}
+                title={certification.title}
+                subtitle={certification.issuer}
+                period={certification.period}
+                description={certification.description}
               />
             </BlurFade>
           ))}
